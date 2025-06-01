@@ -17,9 +17,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB Connection
-console.log(MONGO_URI)
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/localFallbackDB";
 
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/localFallbackDB";
+console.log(MONGO_URI)
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
